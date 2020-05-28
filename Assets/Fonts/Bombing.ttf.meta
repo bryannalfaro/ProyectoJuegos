@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9f7c606c29dea0a48ac09690c461a391
+guid: fc293726e5865c14080ed5b05297f2cb
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: CAMPUS PERSONAL USE
+  fontName: Bombing
   fontNames:
-  - CAMPUS PERSONAL USE
+  - Bombing
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
