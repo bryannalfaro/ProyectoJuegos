@@ -652,7 +652,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.5294118, g: 0.12941177, b: 0.12941177, a: 0}
+  m_BackGroundColor: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -995,8 +995,9 @@ GameObject:
   - component: {fileID: 1810302182}
   - component: {fileID: 1810302181}
   - component: {fileID: 1810302180}
+  - component: {fileID: 1810302184}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1054,7 +1055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: -1
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1083,7 +1084,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1810302182}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810302184}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1810302182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,6 +1132,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810302178}
   m_CullTransparentMesh: 0
+--- !u!114 &1810302184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810302178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9cfce053dc33b34ab7ed5475270c951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!1 &1832832202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,6 +1159,7 @@ GameObject:
   - component: {fileID: 1832832205}
   - component: {fileID: 1832832204}
   - component: {fileID: 1832832207}
+  - component: {fileID: 1832832208}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1202,7 +1229,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1832832205}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1832832208}
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1832832205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1258,6 +1296,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1832832208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832832202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9cfce053dc33b34ab7ed5475270c951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 282361745}
+  transitionTime: 1
 --- !u!1 &2110402151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,6 +1478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 8155510220910887169, guid: 9a9c4d90d2dc24542b78010f97f75742,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8155510220910887170, guid: 9a9c4d90d2dc24542b78010f97f75742,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1486,6 +1543,11 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 282361745}
+    - target: {fileID: 8155510221114744048, guid: 9a9c4d90d2dc24542b78010f97f75742,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8155510221896403796, guid: 9a9c4d90d2dc24542b78010f97f75742,
         type: 3}
       propertyPath: m_Color.r
@@ -1501,5 +1563,6 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.12709148
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8155510220910887171, guid: 9a9c4d90d2dc24542b78010f97f75742, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9a9c4d90d2dc24542b78010f97f75742, type: 3}

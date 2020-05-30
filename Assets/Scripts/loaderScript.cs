@@ -13,10 +13,7 @@ public class loaderScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            LoadNextLevel();
-        }
+       
     }
 
     public void LoadNextLevel()
@@ -30,5 +27,11 @@ public class loaderScript : MonoBehaviour
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelIndex);
+    }
+
+    public void QuitGame()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 }
