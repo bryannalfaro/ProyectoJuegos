@@ -12,9 +12,15 @@ public class TextManager : MonoBehaviour
     private TextMeshProUGUI text;
     public GameObject ball;
     private Rigidbody rbBall;
+    public AudioSource managerAudio;
+    public AudioSource managerAudio2;
+    public AudioClip ready;
+    public AudioClip go;
+
     void Start()
     {
         readyText = GameObject.FindWithTag("Text");
+        managerAudio.PlayOneShot(ready);
         text = readyText.GetComponent<TextMeshProUGUI>();
         rbBall = ball.GetComponent<Rigidbody>();
         Invoke("ChangeText", time);
@@ -30,6 +36,7 @@ public class TextManager : MonoBehaviour
     {
         text.text = "GO!";
         rbBall.useGravity = true;
+        managerAudio2.PlayOneShot(go);
         Destroy(gameObject, time);
     }
 }
