@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
@@ -13,6 +14,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
         private GameObject camera;
+
+        public GameObject hp;
+        private Slider hpSlider;
         private void Start()
         {
             camera = GameObject.FindWithTag("CameraP2"); 
@@ -30,6 +34,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             // get the third person character ( this should never be null due to require component )
             m_Character = GetComponent<ThirdPersonCharacter>();
+            hpSlider = hp.GetComponent<Slider>();
         }
 
 
@@ -70,8 +75,30 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 #endif
 
             // pass all parameters to the character control script
-            m_Character.Move(m_Move, crouch, m_Jump);
+            m_Character.Move(m_Move, false, m_Jump);
             m_Jump = false;
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Ball")
+            {
+                hpSlider.value = hpSlider.value - 10;
+            }
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+
+            if (Input.GetKeyDown(KeyCode.RightShift))
+            {
+                if (other.gameObject.tag == "Ball")
+                {
+                    Rigidbody obj = other.GetComponent<Rigidbody>();
+                    obj.AddForce(transform.forward * 300);
+                }
+            }
+
         }
     }
 }

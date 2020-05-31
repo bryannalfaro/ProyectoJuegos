@@ -8,6 +8,7 @@ TagManager:
   - CameraP1
   - CameraP2
   - Text
+  - Ball
   layers:
   - Default
   - TransparentFX

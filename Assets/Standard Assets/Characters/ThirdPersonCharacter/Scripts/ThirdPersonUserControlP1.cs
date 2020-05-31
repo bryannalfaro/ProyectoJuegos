@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-    [RequireComponent(typeof (ThirdPersonCharacter))]
+    [RequireComponent(typeof(ThirdPersonCharacter))]
     public class ThirdPersonUserControlP1 : MonoBehaviour
     {
         private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
@@ -13,6 +14,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
         private GameObject camera;
+
+        public GameObject hp;
+        private Slider hpSlider;
         private void Start()
         {
             camera = GameObject.FindWithTag("CameraP1");
@@ -30,6 +34,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             // get the third person character ( this should never be null due to require component )
             m_Character = GetComponent<ThirdPersonCharacter>();
+            hpSlider = hp.GetComponent<Slider>();
         }
 
 
@@ -37,7 +42,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
             if (!m_Jump)
             {
-                    m_Jump = CrossPlatformInputManager.GetButtonDown("Jump2");
+                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump2");
             }
         }
 
@@ -57,21 +62,44 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 // calculate camera relative direction to move:
                 m_CamForward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;
-                m_Move = v*m_CamForward + h*m_Cam.right;
+                m_Move = v * m_CamForward + h * m_Cam.right;
             }
             else
             {
                 // we use world-relative directions in the case of no main camera
-                m_Move = v*Vector3.forward + h*Vector3.right;
+                m_Move = v * Vector3.forward + h * Vector3.right;
             }
 #if !MOBILE_INPUT
-			// walk speed multiplier
-	        if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
+            // walk speed multiplier
+            if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
 #endif
 
             // pass all parameters to the character control script
-            m_Character.Move(m_Move, crouch, m_Jump);
+            m_Character.Move(m_Move, false, m_Jump);
             m_Jump = false;
         }
-    }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Ball")
+            {
+                hpSlider.value = hpSlider.value - 10;
+            }
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                if (other.gameObject.tag == "Ball")
+                {
+                    Rigidbody obj = other.GetComponent<Rigidbody>();
+                    obj.AddForce(transform.forward * 300);
+                }
+            }
+            
+        }
+    } 
+
 }
