@@ -8,7 +8,7 @@ public class loaderScript : MonoBehaviour
 {
 
     public Animator transition;
-    public float transitionTime = 1f;
+    public float transitionTime = 0.75f;
 
     public void LoadNextLevel()
     {
