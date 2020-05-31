@@ -768,6 +768,7 @@ MonoBehaviour:
   - {fileID: 2025800329}
   - {fileID: 1494131449}
   loader: {fileID: 2121495228}
+  audioManager: {fileID: 939139510}
 --- !u!4 &342736031
 Transform:
   m_ObjectHideFlags: 0
@@ -1958,6 +1959,18 @@ Transform:
   m_Father: {fileID: 2106664149}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &939139510 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7986101155721014129, guid: b464b4199a41fe34184bd60329f42434,
+    type: 3}
+  m_PrefabInstance: {fileID: 670332071}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15baa3d9979d73c419ebac895fd3a5d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &972246533
 PrefabInstance:
   m_ObjectHideFlags: 0

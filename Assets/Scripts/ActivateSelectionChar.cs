@@ -39,8 +39,17 @@ public class ActivateSelectionChar : MonoBehaviour
     {
         if (isReady1 & isReady2)
         {
+            StartCoroutine(stopSongs());
             loader.LoadNextLevel();
         }
+    }
+
+    IEnumerator stopSongs()
+    {
+        yield return new WaitForSeconds(0.75f);
+        AudioManager am = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        am.Stop("Song1");
+        am.Stop("Song2");
     }
 
 }
