@@ -7,6 +7,7 @@ TagManager:
   - Fire
   - CameraP1
   - CameraP2
+  - Text
   layers:
   - Default
   - TransparentFX
