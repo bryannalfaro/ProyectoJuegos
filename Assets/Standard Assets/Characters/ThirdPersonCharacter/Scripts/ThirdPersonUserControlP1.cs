@@ -1,7 +1,9 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
@@ -19,6 +21,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public Material materialToBall;
         public GameObject hp;
         private Slider hpSlider;
+        public GameObject won;
+        private TextMeshProUGUI wonMessage;
         private void Start()
         {
             camera = GameObject.FindWithTag("CameraP1");
@@ -37,6 +41,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             // get the third person character ( this should never be null due to require component )
             m_Character = GetComponent<ThirdPersonCharacter>();
             hpSlider = hp.GetComponent<Slider>();
+            wonMessage = won.GetComponent<TextMeshProUGUI>();
         }
 
 
@@ -84,6 +89,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             if (collision.gameObject.tag == "Ball" && sphere.GetComponent<Renderer>().material.name != materialToBall.name + " (Instance)")
             {
                 hpSlider.value = hpSlider.value - 10;
+                if(hpSlider.value == 0)
+                {
+                    wonMessage.text = "Player 2 Won!";
+                    won.SetActive(true);
+                    Time.timeScale = 0f;
+                }
             }
         }
 
@@ -99,6 +110,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 }
             }
             
+        }
+
+        public void BackMenu()
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("MainMenu");
         }
     } 
 
