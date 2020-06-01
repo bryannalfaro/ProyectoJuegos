@@ -81,7 +81,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.tag == "Ball")
+            if (collision.gameObject.tag == "Ball" && sphere.GetComponent<Renderer>().material.name != materialToBall.name + " (Instance)")
             {
                 hpSlider.value = hpSlider.value - 10;
             }
