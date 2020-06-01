@@ -17,19 +17,27 @@ public class TextManager : MonoBehaviour
     public AudioClip ready;
     public AudioClip go;
 
+    public GameObject startImage;
+
+
     void Start()
     {
+        Time.timeScale = 0.0f;
         readyText = GameObject.FindWithTag("Text");
-        managerAudio.PlayOneShot(ready);
         text = readyText.GetComponent<TextMeshProUGUI>();
         rbBall = ball.GetComponent<Rigidbody>();
-        Invoke("ChangeText", time);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            Time.timeScale = 1.0f;
+            startImage.SetActive(false);
+            managerAudio.PlayOneShot(ready);
+            Invoke("ChangeText", time);
+        }
     }
 
     void ChangeText()
