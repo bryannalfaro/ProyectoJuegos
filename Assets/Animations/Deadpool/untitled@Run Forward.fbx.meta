@@ -1,17 +1,12 @@
 fileFormatVersion: 2
-guid: ad870cc037f28e94d8e3a830bff51846
+guid: fb990f048a49a1142a3b9178245d5de1
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: spidermanidle
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 36fab7f3ec6a18f49a830529e103c54b, type: 2}
+    second: Run Forward
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -40,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: spidermanidle
+      name: Run Forward
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 296
+      lastFrame: 53
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

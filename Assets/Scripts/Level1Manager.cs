@@ -6,10 +6,12 @@ public class Level1Manager : MonoBehaviour
 {
     public GameObject canvasUI;
     private AudioManager audioManager;
+    private ChargeCharacter chargeCharacter;
     // Start is called before the first frame update
     void Start()
     {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        chargeCharacter = GameObject.Find("SelectedCharacters").GetComponent<ChargeCharacter>();
         audioManager.Play("InGameSound");
         StartCoroutine(activeUI());
     }
