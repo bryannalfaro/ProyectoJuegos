@@ -14410,7 +14410,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 187101354}
+      - m_Target: {fileID: 1610120764}
         m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
