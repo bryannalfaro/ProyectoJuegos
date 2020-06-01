@@ -55,4 +55,10 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Stop();
     }
+
+    public void playRandomToMainMenu()
+    {
+        int randomSong = Random.Range(0, 2);
+        sounds[randomSong].source.Play();
+    }
 }
