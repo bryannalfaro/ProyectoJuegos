@@ -91,7 +91,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void OnTriggerStay(Collider other)
         {
 
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.G))
             {
                 if (other.gameObject.tag == "Ball")
                 {
