@@ -9,6 +9,7 @@ public class PauseBehaviour: MonoBehaviour
 {
     public GameObject pauseMenu;
     private bool isPaused = false;
+    public GameObject obstacles;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,11 @@ public class PauseBehaviour: MonoBehaviour
         am.Stop("InGameSound");
         am.playRandomToMainMenu();
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void enableObstacles(bool state)
+    {
+        obstacles.SetActive(state);
     }
 
 
