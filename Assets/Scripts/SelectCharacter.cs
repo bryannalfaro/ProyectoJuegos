@@ -63,7 +63,7 @@ public class SelectCharacter : MonoBehaviour
             ready2.SetActive(false);
             activateSelectionChar.isReady(false, 2);
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             if (isReady1)
                 activateSelectionChar.startGame();

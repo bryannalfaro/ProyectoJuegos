@@ -30,12 +30,9 @@ public class PauseBehaviour: MonoBehaviour
     public void TogglePause()
     {
 
-        if (pauseMenu)
-        {
-            pauseMenu.SetActive(!isPaused);
-            isPaused = !isPaused;
-            Time.timeScale = isPaused ? 0.0f : 1.0f;
-        }
+        pauseMenu.SetActive(!isPaused);
+        isPaused = !isPaused;
+        Time.timeScale = isPaused ? 0.0f : 1.0f;
 
     }
 
@@ -43,6 +40,9 @@ public class PauseBehaviour: MonoBehaviour
     public void BackMenu()
     {
         Time.timeScale = 1f;
+        AudioManager am = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        am.Stop("InGameSound");
+        am.playRandomToMainMenu();
         SceneManager.LoadScene("MainMenu");
     }
 
