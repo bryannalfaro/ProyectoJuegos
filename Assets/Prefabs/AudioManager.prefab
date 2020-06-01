@@ -143,19 +143,19 @@ MonoBehaviour:
   sounds:
   - name: Song1
     clip: {fileID: 8300000, guid: dc7d3c99ce9ca584ebb693d49e82cea4, type: 3}
-    volume: 0.4
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Song2
     clip: {fileID: 8300000, guid: 3c92304955a59fe47b2cde4d3ebdede0, type: 3}
-    volume: 0.4
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: InGameSound
     clip: {fileID: 8300000, guid: c1d90056fa6b5e64c875f8a5845d44ee, type: 3}
-    volume: 0.1
+    volume: 0.05
     pitch: 1
     loop: 1
     source: {fileID: 0}
