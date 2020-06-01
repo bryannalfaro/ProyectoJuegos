@@ -6915,7 +6915,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0.19992, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9259,8 +9259,8 @@ RectTransform:
   m_Father: {fileID: 86780762}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.19992, y: 0}
+  m_AnchorMax: {x: 0.19992, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12092,8 +12092,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61, y: -119}
-  m_SizeDelta: {x: 245, y: 40.35}
+  m_AnchoredPosition: {x: -114.3, y: -119}
+  m_SizeDelta: {x: 114.97, y: 40.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498421754
 MonoBehaviour:
@@ -14364,7 +14364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.8999634, y: -61}
+  m_AnchoredPosition: {x: -2.8999634, y: 16.8}
   m_SizeDelta: {x: 165.8, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710052945
@@ -14874,7 +14874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22, y: 0}
+  m_AnchoredPosition: {x: -22, y: -47.2}
   m_SizeDelta: {x: 165.8, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1733510001
@@ -18365,7 +18365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41, y: -112}
+  m_AnchoredPosition: {x: 41, y: -117.8}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054800213
@@ -18414,7 +18414,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -18442,6 +18442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: d4b300229efce4e459529efed7c48e0b, type: 2}
+  audioManager: {fileID: 0}
 --- !u!1001 &2066071572
 PrefabInstance:
   m_ObjectHideFlags: 0

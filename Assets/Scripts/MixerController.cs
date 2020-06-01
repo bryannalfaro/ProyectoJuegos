@@ -6,11 +6,13 @@ using UnityEngine.Audio;
 public class MixerController : MonoBehaviour
 {
     public AudioMixer mixer;
-
+    public AudioManager audioManager;
+    private void Start()
+    {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+    }
     public void SetLevel(float sliderValue)
     {
-
-        mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
-
+        audioManager.setVolumeInGame(sliderValue);
     }
 }

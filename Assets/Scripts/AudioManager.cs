@@ -61,4 +61,10 @@ public class AudioManager : MonoBehaviour
         int randomSong = Random.Range(0, 2);
         sounds[randomSong].source.Play();
     }
+
+    public void setVolumeInGame(float sliderValue)
+    {
+        Sound s = System.Array.Find(sounds, sound => sound.name == "InGameSound");
+        s.source.volume = sliderValue;
+    }
 }
