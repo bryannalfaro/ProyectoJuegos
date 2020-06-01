@@ -26,6 +26,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 483744235, guid: f778b73cb8731bb49b4f8359ddd55cf3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1249465854, guid: f778b73cb8731bb49b4f8359ddd55cf3, type: 3}
       propertyPath: sphere
       value: 
@@ -109,6 +113,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 956103204}
+    - target: {fileID: 8831632083493050370, guid: f778b73cb8731bb49b4f8359ddd55cf3,
+        type: 3}
+      propertyPath: m_JumpPower
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f778b73cb8731bb49b4f8359ddd55cf3, type: 3}
 --- !u!4 &2853053584099142417 stripped

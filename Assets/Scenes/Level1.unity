@@ -2262,6 +2262,12 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4628794439172523740, guid: 470bbdb9740c1db419c19bd0d7f3b796,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a85dc61425e713c4b8a6d829996902f7,
+        type: 3}
     - target: {fileID: 4628794439824229284, guid: 470bbdb9740c1db419c19bd0d7f3b796,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2482,6 +2488,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4628794440683521212, guid: 470bbdb9740c1db419c19bd0d7f3b796,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 54fffabf0e6a3094ebf302914eb33b38,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 470bbdb9740c1db419c19bd0d7f3b796, type: 3}
 --- !u!43 &400151755
@@ -19302,11 +19314,6 @@ PrefabInstance:
       propertyPath: won
       value: 
       objectReference: {fileID: 1884365010}
-    - target: {fileID: 6703704290232751166, guid: 010b7695e16148f4aaf142256f4888de,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 010b7695e16148f4aaf142256f4888de, type: 3}
 --- !u!1001 &6716925893998017961
