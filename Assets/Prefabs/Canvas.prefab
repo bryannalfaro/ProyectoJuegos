@@ -222,11 +222,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -499,6 +499,7 @@ MonoBehaviour:
   managerAudio2: {fileID: 73141983986304211}
   ready: {fileID: 8300000, guid: 8e34696c27ddec3428238d40fb99e2c0, type: 3}
   go: {fileID: 8300000, guid: 583d40131634cb54a8df51bcd4404995, type: 3}
+  startImage: {fileID: 0}
 --- !u!82 &73141983986304210
 AudioSource:
   m_ObjectHideFlags: 0
