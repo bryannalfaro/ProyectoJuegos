@@ -14,6 +14,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
         private GameObject camera;
+        public float hitForce;
 
         public GameObject hp;
         private Slider hpSlider;
@@ -95,7 +96,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 if (other.gameObject.tag == "Ball")
                 {
                     Rigidbody obj = other.GetComponent<Rigidbody>();
-                    obj.AddForce(transform.forward * 300);
+                    obj.AddForce(transform.forward * hitForce);
                 }
             }
 
